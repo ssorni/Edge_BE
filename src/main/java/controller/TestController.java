@@ -2,19 +2,23 @@ package controller;
 
 import domain.Test;
 import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class TestController {
 
+     private final Test test;
+
+     @Autowired
+     public TestController(Test test) {
+         this.test = test;
+     }
+
     @GetMapping("/test")
     public String test(Model model) {
-
-        Test test = new Test();
-
-        test.setTemperature(25);
-        test.setHumidity(60);
 
         model.addAttribute("temperature", test.getTemperature());
         model.addAttribute("humidity", test.getHumidity());
