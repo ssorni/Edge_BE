@@ -1,16 +1,20 @@
 package service;
 
-import domain.Test;
+import domain.HumidityDomain;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+@Getter
+@Setter
 @Service
-public class TestService {
+public class HumidityService {
 
-    private final Test test;
+    private final HumidityDomain test;
 
     @Autowired
-    public TestService(Test test) {
+    public HumidityService(HumidityDomain test) {
         this.test = test;
     }
 
