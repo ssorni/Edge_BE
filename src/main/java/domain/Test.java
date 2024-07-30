@@ -1,19 +1,25 @@
 package domain;
 
-public class Test {
-    private int temperature;
-    private int humidity;
+import org.springframework.stereotype.Component;
 
-    public int getTemperature() {
+@Component
+public class Test {
+    private float temperature;
+    private float humidity;
+
+    public float getTemperature() {
         return temperature;
     }
-    public void setTemperature(int temperature) {
+
+    public void setTemperature(float temperature) {
         this.temperature = temperature;
     }
-    public int getHumidity() {
+
+    public float getHumidity() {
         return humidity;
     }
-    public void setHumidity(int humidity) {
+
+    public void setHumidity(float humidity) {
         this.humidity = humidity;
     }
 }

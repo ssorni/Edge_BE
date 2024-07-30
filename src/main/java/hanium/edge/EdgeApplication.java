@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"hanium.edge", "controller"})
+@ComponentScan(basePackages = {"hanium.edge"})
 public class EdgeApplication {
 
 	public static void main(String[] args) {
